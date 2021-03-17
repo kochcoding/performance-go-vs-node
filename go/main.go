@@ -21,12 +21,12 @@ func main() {
 
 func job(n int, wg *sync.WaitGroup) {
 	defer wg.Done()
-	_ = fib(n)
+	_ = fibonacci(n)
 }
 
-func fib(n int) int {
+func fibonacci(n int) int {
 	if n <= 1 {
 		return n
 	}
-	return fib(n-1) + fib(n-2)
+	return fibonacci(n-1) + fibonacci(n-2)
 }
